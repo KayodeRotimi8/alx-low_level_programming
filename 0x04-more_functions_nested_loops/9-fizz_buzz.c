@@ -12,17 +12,17 @@ int main(void)
 
 	while (multiples <= 100)
 	{
-		if (multiples % 3 == 0)
+		if (multiples % 3 == 0 && multiples % 5 == 0)
+		{
+			printf("FizzBuzz");
+		}
+		else if (multiples % 3 == 0)
 		{
 			printf("Fizz");
 		}
 		else if (multiples % 5 == 0)
 		{
 			printf("Buzz");
-		}
-		else if (multiples % 3 == 0 && multiples % 5 == 0)
-		{
-			printf("FizzBuzz");
 		}
 		else
 		{
