@@ -20,7 +20,7 @@ void rev_string(char *s)
 	}
 
 	begin = 0;
-	end = len -1;
+	end = len - 1;
 	while (begin < end)
 	{
 		reverse = s[begin];
