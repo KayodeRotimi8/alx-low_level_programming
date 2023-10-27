@@ -22,8 +22,8 @@ int is_palindrome(char *s)
 /**
  * check_palindrome - helper function to check if a string is a palindrome
  *
- * @start: start of the string
- * @end: end of the string
+ * @st: start of the string
+ * @e: end of the string
  *
  * Return: 1 if a palindrome, 0 if not
  */
