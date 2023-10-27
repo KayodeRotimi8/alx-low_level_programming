@@ -16,7 +16,7 @@ int is_prime_number(int n)
 	if (n <= 1)
 		return (0);
 
-	return (recursive_prime(n, 2));
+	return (recursive_prime(n, n - 1));
 }
 
 /**
@@ -30,11 +30,11 @@ int is_prime_number(int n)
 
 int recursive_prime(int n, int div)
 {
-	if (div * div > n)
+	if (div == 1)
 		return (1);
 
-	if (n % div == 0 && div > 0)
+	if (n % div == 0)
 		return (0);
 
-	return (recursive_prime(n, div + 1));
+	return (recursive_prime(n, div - 1));
 }
