@@ -16,11 +16,11 @@ int is_prime_number(int n)
 	if (n <= 1)
 		return (0);
 
-	return (recursive_prime(n, n - 1));
+	return (recursive_prime(n, 2));
 }
 
 /**
- * check_prime - calculates if a number is prime recursively
+ * recursive_prime - calculates if a number is prime recursively
  *
  * @n: number to check
  * @div: divisor for check
@@ -30,11 +30,11 @@ int is_prime_number(int n)
 
 int recursive_prime(int n, int div)
 {
-	if (div == 1)
+	if (div * div > n)
 		return (1);
 
 	if (n % div == 0)
 		return (0);
 
-	return (recursive_prime(n, div - 1));
+	return (recursive_prime(n, div + 1));
 }
