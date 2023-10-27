@@ -14,7 +14,7 @@ int _strlen(char *s);
 int is_palindrome(char *s)
 {
 	if (!*s)
-		return 1;
+		return (1);
 
 	return (check_palindrome(s, s + _strlen(s) - 1));
 }
@@ -31,10 +31,10 @@ int is_palindrome(char *s)
 int check_palindrome(char *st, char *e)
 {
 	if (st >= e)
-		return 1;
+		return (1);
 
 	if (*st != *e)
-		return 0;
+		return (0);
 
 	return (check_palindrome(st + 1, e - 1));
 }
@@ -50,7 +50,7 @@ int check_palindrome(char *st, char *e)
 int _strlen(char *s)
 {
 	if (!*s)
-		return 0;
+		return (0);
 
 	return (1 + _strlen(s + 1));
 }
