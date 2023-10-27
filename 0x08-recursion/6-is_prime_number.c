@@ -33,7 +33,7 @@ int recursive_prime(int n, int div)
 	if (div * div > n)
 		return (1);
 
-	if (n % div == 0)
+	if (n % div == 0 && div > 0)
 		return (0);
 
 	return (recursive_prime(n, div + 1));
